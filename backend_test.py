@@ -58,9 +58,11 @@ class CryptoInvestmentTester:
         """Test user registration endpoint"""
         print("\n👤 Testing User Registration...")
         try:
+            unique_id = datetime.now().microsecond
+            self.test_user_email = f"michael.trader{unique_id}@gmail.com"
             user_data = {
-                "email": f"michael.trader{datetime.now().microsecond}@gmail.com",
-                "username": f"MichaelTrader{datetime.now().microsecond}",
+                "email": self.test_user_email,
+                "username": f"MichaelTrader{unique_id}",
                 "password": "SecurePass123!"
             }
             
