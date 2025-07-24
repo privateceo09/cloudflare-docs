@@ -88,7 +88,7 @@ class CryptoInvestmentTester:
         print("\n🔐 Testing User Login...")
         try:
             login_data = {
-                "email": "sarah.crypto@gmail.com",
+                "email": f"michael.trader{datetime.now().microsecond}@gmail.com",
                 "password": "SecurePass123!"
             }
             
