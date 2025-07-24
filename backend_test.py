@@ -17,6 +17,7 @@ class CryptoInvestmentTester:
         self.session = requests.Session()
         self.user_token = None
         self.admin_token = None
+        self.test_user_email = None
         self.test_results = {
             "auth_system": {"passed": False, "details": []},
             "investment_management": {"passed": False, "details": []},
