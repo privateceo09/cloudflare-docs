@@ -333,7 +333,7 @@ async def get_leaderboard():
 
 @api_router.get("/admin/users")
 async def get_all_users(current_user: User = Depends(get_admin_user)):
-    users = await db.users.find({}, {"password_hash": 0}).to_list(1000)
+    users = await db.users.find({}, {"password_hash": 0, "_id": 0}).to_list(1000)
     return users
 
 @api_router.get("/admin/stats")
